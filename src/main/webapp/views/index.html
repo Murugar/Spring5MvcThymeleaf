@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{view.title}">Title</title>
+</head>
+    <body>
+        <img th:src="@{assets/spring-logo.png}" style="height: 100px"/>
+        <h1><span th:text="#{index.welcome}" /></h1>
+        <form th:action="@{/hello}" th:object="${person}" method="post">
+            <table>
+                <tr>
+                    <td><label th:text="#{index.form.inputName}" /></td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td><label th:text="#{index.form.inputBirthdate}" /></td>
+                    <td><input type="date" th:field="*{birthDate}" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" th:value="#{index.submitButton}" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

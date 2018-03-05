@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{view.title}">Title</title>
+</head>
+<body>
+    <h1><span th:text="#{hello.greeting(${person.name})}" /></h1>
+    <p><span th:text="#{hello.birthDay(${person.birthDate})}" /></p>
+    <p><a th:href="@{/}"><span th:text="#{hello.backHome}" /></a></p>
+</body>
+</html>
